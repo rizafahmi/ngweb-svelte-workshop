@@ -1,6 +1,9 @@
 <script>
+  import Navigation from "./lib/Navigation.svelte";
+  import Episodes from "./lib/Episodes.svelte";
 </script>
 
 <main class="container">
-  <h1>Halo Pico</h1>
+  <Navigation />
+  <Episodes />
 </main>
