@@ -3,7 +3,7 @@
   $: wordCount = description.split(" ").length;
 </script>
 
-<h2>{description}</h2>
+<h1>{description}</h1>
 {#if wordCount > 5}
   <blockquote>Warning: Text too long!</blockquote>
 {:else}
@@ -16,5 +16,8 @@
   blockquote {
     font-size: 2rem;
     color: tomato;
+  }
+  h1 {
+    color: mediumaquamarine;
   }
 </style>

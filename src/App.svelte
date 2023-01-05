@@ -2,9 +2,15 @@
   import svelteLogo from "./assets/svelte.svg";
   import Counter from "./lib/Counter.svelte";
   import Editor from "./lib/Editor.svelte";
+
+  let isDarkMode = true;
+
+  function handleMode() {
+    isDarkMode = !isDarkMode;
+  }
 </script>
 
-<main>
+<main class:dark={isDarkMode} class="light">
   <div>
     <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
       <img src="/vite.svg" class="logo" alt="Vite Logo" />
@@ -18,6 +24,9 @@
   <div class="card">
     <Counter />
     <Editor />
+  </div>
+  <div class="card">
+    <button on:click={handleMode}>Switch Mode</button>
   </div>
 
   <p>
@@ -45,5 +54,11 @@
   }
   .read-the-docs {
     color: #888;
+  }
+  .light {
+    background-color: azure;
+  }
+  .dark {
+    background-color: darkslateblue;
   }
 </style>
